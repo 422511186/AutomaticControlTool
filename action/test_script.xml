@@ -1,0 +1,14 @@
+<test>
+    <action>
+        <type>open</type>
+        <data>https://www.baidu.com</data>
+    </action>
+    <action>
+        <type>input</type>
+        <data>#kw,google</data>
+    </action>
+    <action>
+        <type>click</type>
+        <data>#su</data>
+    </action>
+</test>

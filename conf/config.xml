@@ -1,0 +1,6 @@
+<config>
+    <driver_path>D:\\WorkSpace\\chromedriver.exe</driver_path>
+    <browser_type>chrome</browser_type>
+    <default_wait_time>10</default_wait_time>
+    <headless>false</headless>
+</config>
