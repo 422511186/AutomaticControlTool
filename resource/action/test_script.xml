@@ -11,4 +11,8 @@
         <type>click</type>
         <data>#su</data>
     </action>
+    <action>
+        <type>wait</type>
+        <data>20</data>
+    </action>
 </test>
