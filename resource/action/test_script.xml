@@ -1,18 +1,30 @@
 <test>
     <action>
         <type>open</type>
-        <data>https://www.baidu.com</data>
+        <data>
+            <url>https://www.baidu.com</url>
+        </data>
     </action>
     <action>
         <type>input</type>
-        <data>#kw,google</data>
+        <data>
+            <css_selector>#kw</css_selector>
+            <text>google</text>
+        </data>
     </action>
     <action>
         <type>click</type>
-        <data>#su</data>
+        <data>
+            <css_selector>#su</css_selector>
+        </data>
     </action>
     <action>
         <type>wait</type>
-        <data>20</data>
+        <data>
+            <secs>5</secs>
+        </data>
+    </action>
+    <action>
+        <type>quit</type>
     </action>
 </test>

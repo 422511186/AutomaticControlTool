@@ -1,6 +1,30 @@
+from __future__ import annotations
+
+from xml.etree.ElementTree import Element
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import xml.etree.ElementTree as ET
+
+from action import open_action, action, input_action, wait_action, click_action, quit_action
+
+
+class action_factory:
+
+    @staticmethod
+    def get_action(element: Element) -> action | None:
+        action_type = element.find('type').text
+        if action_type == 'open':
+            return open_action(element.find('data'))
+        elif action_type == 'input':
+            return input_action(element.find('data'))
+        elif action_type == 'click':
+            return click_action(element.find('data'))
+        elif action_type == 'wait':
+            return wait_action(element.find('data'))
+        elif action_type == 'quit':
+            return quit_action()
+        else:
+            print('Unsupported action_type:', action_type)
 
 
 class WebDriverFactory:
